@@ -6,3 +6,4 @@ images:
   newTag: 0.1.2
 resources:
 - ../base
+- ingress.yaml

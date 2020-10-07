@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: kong
+  name: test-app
+spec:
+  rules:
+  - host: test-app.kong.yk8s.me
+    http:
+      paths:
+      - backend:
+          serviceName: test-app
+          servicePort: http
+        path: /
+  tls:
+  - hosts:
+    - test-app.kong.yk8s.me
+    secretName: test-app-kong-yk8s-me
