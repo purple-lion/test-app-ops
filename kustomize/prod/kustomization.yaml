@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: test-app
   newName: 899864473854.dkr.ecr.ap-northeast-2.amazonaws.com/ci-test/test-app
-  newTag: 0.1.3
+  newTag: 0.1.4
 resources:
 - ../base
 - ingress.yaml
